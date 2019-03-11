@@ -15,12 +15,12 @@ body {
   justify-content: center;
 }
 #content div {
-
   padding: 10px;
 }
 .grow-box {
   grid-column: span 1;
   grid-row: span 1;
+  background: #e9e9e9;
 }
 .box {
   grid-column: 1fr;
@@ -35,20 +35,31 @@ body {
   /* border-radius: 10px; */
   transform-style: preserve-3d;
   transition: all 0.8s ease;
+
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
 .thecard:hover {
   transform: rotateY(180deg);
 }
-
+.thecard:hover:after 
+{
+  content: "";
+  height: calc(100% + 1rem);
+  position: absolute;
+  width: 92%;
+  z-index: -1;
+  bottom: -1rem;
+}
 /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
 .thefront {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 92%;
+  height: 92%;
   border-radius: 10px;
   backface-visibility: hidden;
   overflow: hidden;
@@ -61,8 +72,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 92%;
+  height: 92%;
   border-radius: 10px;
   backface-visibility: hidden;
   overflow: hidden;
