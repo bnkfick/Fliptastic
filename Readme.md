@@ -12,6 +12,8 @@ This application is in progress. Currently, the application is used for basic fl
 - angular
 - css flipcard effect
 
+![Fliptastic Flashcards](Fliptastic.png)
+
 
 
 
